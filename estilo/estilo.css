@@ -1,0 +1,232 @@
+body {
+    background-color: #0a0a0a;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/*CSS gerais*/
+.containerInicio,
+.conteudo {
+    max-width: 90%;
+    margin: auto;
+}
+
+.inicioTexto h2,
+.tituloConteudo,
+.tituloCard {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/*CSS para o header/menu*/
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+}
+
+.menu {
+    display: flex;
+    /*transforma nav em flex*/
+}
+
+.listaMenu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.linkMenu {
+    text-decoration: none;
+    color: white;
+    font-size: 35px;
+
+}
+
+.logoTopo {
+    width: 175px;
+}
+
+#hamburguer {
+    display: none;
+}
+
+/*Section inicio*/
+
+.inicio {
+    background-image: url(imagens/fundo.png);
+    background-position: top;
+    background-size: 110% auto;
+    background-repeat: no-repeat;
+}
+
+.containerInicio {
+    display: flex;
+    width: 100%;
+    height: 50vw;
+}
+
+.inicioTexto {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    transform: translateY(-10%);
+    visibility: hidden;
+    position: relative;
+    /*para utilizar z-index(se não fica por cima do menu mobile)*/
+    z-index: 0;
+
+}
+
+.inicioTexto h1 {
+    font-size: 5.65vw;
+    padding: 0;
+    margin: 0;
+}
+
+.inicioTexto h2 {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 2vw;
+}
+
+.inicioImg {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    /*para utilizar z-index(se não fica por cima do menu mobile)*/
+    z-index: 0;
+
+
+}
+
+.inicioImg img {
+    width: 25vw;
+    /*transform: translateY(-10%);*/
+    animation: float 3s ease-in-out infinite;
+
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateY(-5%);
+    }
+}
+
+/*Main/conteudo*/
+.tituloConteudo {
+    font-size: 3vw;
+}
+
+/*Cards*/
+.containerConteudo {
+    padding: 30px 80px;
+    background-color: #242424;
+    border-radius: 15px;
+}
+
+.tituloCard {
+    font-size: 2.5vw;
+}
+
+.paragrafoCard {
+    font-size: 2vw;
+}
+
+.containerImg {
+    display: flex;
+    justify-content: space-between;
+}
+
+.conteudoImg {
+    width: 49%;
+    border-radius: 30px;
+    margin-bottom: 80px;
+}
+
+#tituloConteudo2 {
+    margin-top: 100px;
+}
+
+@media (max-width: 800px) {
+
+    /*CSS para o header/menu*/
+    header {
+        padding: 10px 10px;
+    }
+
+    #hamburguer {
+        display: block;
+        font-size: 35px;
+    }
+
+    .listaMenu {
+        display: none;
+        position: absolute;
+        width: 100%;
+        background-color: rgb(83, 83, 83);
+        top: 70px;
+        right: 0;
+        z-index: 999;
+    }
+
+    .menu.active .listaMenu {
+        display: block;
+    }
+
+    /*Section inicio*/
+
+    /*Main/conteudo*/
+    .tituloConteudo {
+        font-size: 5vw;
+    }
+
+
+    /*Cards*/
+    .containerConteudo {
+        padding: 10px 30px;
+        background-color: #242424;
+        border-radius: 15px;
+    }
+
+    .tituloCard {
+        font-size: 4vw;
+    }
+
+    .paragrafoCard {
+        font-size: 4vw;
+    }
+
+    .containerImg{
+        padding: 0;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .conteudoImg {
+        width: 100%;
+        border-radius: 30px;
+        margin-bottom: 30px;
+    }
+
+    #tituloConteudo2 {/*distancia entre os dois cards*/
+        margin-top: 40px;
+    }
+}
