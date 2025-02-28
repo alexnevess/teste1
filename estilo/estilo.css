@@ -18,7 +18,7 @@ body {
 
 .inicioTexto h2,
 .tituloConteudo,
-.tituloCard {
+.tituloCard, .textoAT {
     font-family: "Lora", serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -165,6 +165,52 @@ header {
     margin-top: 100px;
 }
 
+/*slogan*/
+
+.slogan{
+    background-image: url(imagens/fundoimg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 25px;
+    margin-top: 100px;
+    position: relative;
+}
+
+.textoSlogan{
+    font-size: 6vw;
+    padding: 30px 30px;
+    margin: 0;
+}
+
+.textoAT{
+    padding: 0;
+    margin: 0;
+    font-size: 2vw;
+    position: absolute;
+    right: 20px;
+    transform: translateY(-100%);
+    font-weight: bold;
+}
+
+/*primeiro botão*/
+
+.botao{
+    text-align: center;
+    padding: 30px;
+    margin: 30px 0;
+}
+
+.linkBtn{
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    background-color: blue;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 30px;
+}
+
 @media (max-width: 800px) {
 
     /*CSS para o header/menu*/
@@ -195,7 +241,11 @@ header {
 
     /*Main/conteudo*/
     .tituloConteudo {
-        font-size: 5vw;
+        font-size: 5.5vw;
+    }
+
+    .conteudo{
+        max-width: 95%;
     }
 
 
@@ -206,12 +256,16 @@ header {
         border-radius: 15px;
     }
 
+    .containerConteudo br{/*tira a quebra de linha dos cards*/
+        display: none;
+    }
+
     .tituloCard {
-        font-size: 4vw;
+        font-size: 4.7vw;
     }
 
     .paragrafoCard {
-        font-size: 4vw;
+        font-size: 5vw;
     }
 
     .containerImg{
@@ -228,5 +282,23 @@ header {
 
     #tituloConteudo2 {/*distancia entre os dois cards*/
         margin-top: 40px;
+    }
+
+    /*Slogan*/
+    .slogan{
+        margin-top: 30px;
+    }
+    .slogan br{
+        display: none;
+    }
+
+    .textoSlogan{
+        font-size: 8vw;
+        padding: 30px 30px;
+        margin: 0;
+    }
+    
+    .textoAT{
+        font-size: 3.5vw;
     }
 }
